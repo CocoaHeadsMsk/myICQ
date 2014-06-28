@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DEBB8EB61804B2FA2C2F754 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0A94E66F344C18824FDA81 /* libPods.a */; };
 		70D268F1195EA733005904F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D268F0195EA733005904F9 /* AppDelegate.swift */; };
 		70D268F3195EA733005904F9 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D268F2195EA733005904F9 /* FirstViewController.swift */; };
 		70D268F5195EA733005904F9 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D268F4195EA733005904F9 /* SecondViewController.swift */; };
@@ -27,6 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2FD043F53C3044EA94713523 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		616EB9C8195EBB1500D0D37A /* myICQ-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "myICQ-Bridging-Header.h"; sourceTree = "<group>"; };
+		616EB9C9195EBB1500D0D37A /* myICQTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "myICQTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		70D268EB195EA733005904F9 /* myICQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myICQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70D268EF195EA733005904F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70D268F0195EA733005904F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +42,7 @@
 		70D26904195EA733005904F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70D26905195EA733005904F9 /* myICQTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myICQTests.swift; sourceTree = "<group>"; };
 		70D26911195EB44A005904F9 /* myICQ.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = myICQ.xcdatamodel; sourceTree = "<group>"; };
+		BC0A94E66F344C18824FDA81 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DEBB8EB61804B2FA2C2F754 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +64,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15D36A7DC26D4DEB81283D6C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC0A94E66F344C18824FDA81 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		70D268E2195EA733005904F9 = {
 			isa = PBXGroup;
 			children = (
 				70D268ED195EA733005904F9 /* myICQ */,
 				70D26902195EA733005904F9 /* myICQTests */,
 				70D268EC195EA733005904F9 /* Products */,
+				2FD043F53C3044EA94713523 /* Pods.xcconfig */,
+				15D36A7DC26D4DEB81283D6C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +102,8 @@
 				70D268F6195EA733005904F9 /* Main.storyboard */,
 				70D268F9195EA733005904F9 /* Images.xcassets */,
 				70D268EE195EA733005904F9 /* Supporting Files */,
+				616EB9C8195EBB1500D0D37A /* myICQ-Bridging-Header.h */,
+				616EB9C9195EBB1500D0D37A /* myICQTests-Bridging-Header.h */,
 			);
 			path = myICQ;
 			sourceTree = "<group>";
@@ -130,9 +148,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 70D26909195EA733005904F9 /* Build configuration list for PBXNativeTarget "myICQ" */;
 			buildPhases = (
+				C044DDF8DFBA40E094E2F662 /* Check Pods Manifest.lock */,
 				70D268E7195EA733005904F9 /* Sources */,
 				70D268E8195EA733005904F9 /* Frameworks */,
 				70D268E9195EA733005904F9 /* Resources */,
+				134227E1F00F400E97AA2FA6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -216,6 +236,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		134227E1F00F400E97AA2FA6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C044DDF8DFBA40E094E2F662 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		70D268E7195EA733005904F9 /* Sources */ = {
@@ -340,23 +393,30 @@
 		};
 		70D2690A195EA733005904F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FD043F53C3044EA94713523 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = myICQ/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "myICQ/myICQ-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		70D2690B195EA733005904F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FD043F53C3044EA94713523 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = myICQ/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "myICQ/myICQ-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -364,6 +424,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/myICQ.app/myICQ";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -376,6 +437,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "myICQ/myICQTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
@@ -384,6 +447,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/myICQ.app/myICQ";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -392,6 +456,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "myICQ/myICQTests-Bridging-Header.h";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
