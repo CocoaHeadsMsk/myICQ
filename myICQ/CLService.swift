@@ -9,7 +9,11 @@
 import Foundation
 
 class CLService {
-	func contactList() -> Array<Contact> {
-		
+	func contactList() -> Contact[] {
+		var contactList = Contact[]()
+		for _ in 0..10 {
+			contactList += Contact()
+		}
+		return contactList
 	}
 }
