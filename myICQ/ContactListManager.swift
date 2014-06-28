@@ -16,6 +16,7 @@ class ContactListManager {
 			var contact = Contact()
 			contact.name = "ContactName\(index)"
 			contact.nickname = "ContactNickname\(index)"
+			contactList += contact
 		}
 		return contactList
 		}()
@@ -50,8 +51,25 @@ class ContactListManager {
 		ContactListService.sharedInstance().addContacts(contacts)
 	}
 	
+	func removeContact(contact: Contact) {
+		if let index = _indexOfContact(contact) {
+			contactList.removeAtIndex(index)
+		}
+
+		ContactListService.sharedInstance().addContact(contact)
+	}
+	
 	func renameContact(contact: Contact, newName: String) {
 		// TODO: save in core data and send new name to server.
 		ContactListService.sharedInstance().renameContact(contact, newName: newName)
+	}
+	
+	func _indexOfContact(contact: Contact) -> Int? {
+		for (index, objectInArray) in enumerate(contactList) {
+			if objectInArray == contact {
+				return index
+			}
+		}
+		return nil
 	}
 }

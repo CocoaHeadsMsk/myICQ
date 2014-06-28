@@ -35,6 +35,10 @@ class ContactListService {
 		// TODO: send to server
 	}
 	
+	func removeContact(contact: Contact) {
+		// TODO: send to server
+	}
+	
 	func renameContact(contact: Contact, newName: String) {
 		// TODO: send new name to server.
 	}

@@ -12,9 +12,9 @@ class ContactListViewController : UITableViewController {
     
     let kCellIdentifier = "CellIdentifier"
     
-    var contacts: NSArray = []
+    var contacts: Contact[] = []
     
-    var contactManager = ContactListManager()
+    var contactManager = ContactListManager.sharedInstance()
     
     init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)

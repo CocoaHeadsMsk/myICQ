@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-class Contact {
+class Contact: Equatable {
 
 	var name: String = ""
 	var nickname: String = ""
@@ -18,4 +18,8 @@ class Contact {
 //		super.init(entity: entity, insertIntoManagedObjectContext: context)
 //	}
 
+}
+
+func ==(lhs: Contact, rhs: Contact) -> Bool {
+	return lhs === rhs
 }
