@@ -10,26 +10,32 @@ import Foundation
 
 class ContactListService {
 	
-	func contactList() -> Contact[] {
-		var contactList = Contact[]()
-		for index in 0..10 {
-			var contact = Contact()
-			contact.name = "ContactName\(index)"
-			contact.nickname = "ContactNickname\(index)"
+	@required init() {
+		
+	}
+	
+	class func sharedInstance() -> ContactListService {
+		struct Static {
+			static var instance: ContactListService? = nil
+			static var onceToken: dispatch_once_t = 0
 		}
-		return contactList
+		
+		dispatch_once(&Static.onceToken) {
+			Static.instance = self()
+		}
+		
+		return Static.instance!
 	}
 	
 	func addContact(contact: Contact) {
 		// TODO: send to server
 	}
 	
-	func addContacts(constacts: Contact[]) {
+	func addContacts(contacts: Contact[]) {
 		// TODO: send to server
 	}
 	
 	func renameContact(contact: Contact, newName: String) {
-		// TODO: save in core data and send new name to server.
-		contact.name = newName
+		// TODO: send new name to server.
 	}
 }
