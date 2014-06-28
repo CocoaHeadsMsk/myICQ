@@ -67,11 +67,27 @@ class ContactListViewController : UITableViewController {
 		
         cell.detailTextLabel.text = contact.name
         cell.textLabel.text = contact.nickname
-        
+		
         return cell
     }
     
     override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
         return contacts.count
     }
+	
+	override func tableView(tableView: UITableView!, canEditRowAtIndexPath indexPath: NSIndexPath!) -> Bool {
+		return true
+	}
+	
+	override func tableView(tableView: UITableView!, editingStyleForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCellEditingStyle {
+		return .Delete
+	}
+	
+	override func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
+		if editingStyle == .Delete {
+			ContactListManager.sharedInstance.removeContact(contacts[indexPath.row])
+			self.tableView.reloadData()
+		}
+	}
+	
 }

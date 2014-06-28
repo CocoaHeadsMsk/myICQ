@@ -54,11 +54,13 @@ class ContactListManager {
 	}
 	
 	func removeContact(contact: Contact) {
-		if let index = _indexOfContact(contact) {
-			contactList.removeAtIndex(index)
+		MagicalRecord.saveUsingCurrentThreadContextWithBlockAndWait() { context in
+			if let index = self._indexOfContact(contact) {
+				self.contactList.removeAtIndex(index)
+				contact.MR_deleteInContext(context)
+				ContactListService.sharedInstance().removeContact(contact)
+			}
 		}
-		
-		ContactListService.sharedInstance().removeContact(contact)
 	}
 	
 	func renameContact(contact: Contact, newName: String) {
