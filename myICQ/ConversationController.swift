@@ -17,7 +17,7 @@ class ConversationController {
 		var result = Message[]()
 
 		MagicalRecord.saveUsingCurrentThreadContextWithBlockAndWait( { context in
-			result = Message.MR_findAllWithPredicate(nil, inContext: context) as Array<Message>
+			result = Message.MR_findAllWithPredicate(nil, inContext: context) as Message[]
 			}
 		)
 
@@ -25,7 +25,11 @@ class ConversationController {
 	}
 	
 	init() {
-		
+		MessageManager.sharedInstance().addIncomingMessageObserver(){ messages in
+			for callback:NewMessagesObserverCallback in self._observers {
+				callback(messages)
+			}
+		}
 	}
 
 	func messageAtIndex(index: Int) -> Message {
@@ -39,6 +43,14 @@ class ConversationController {
 
 	func loadedCount() -> Int {
 		return _loadedMessages.count;
+	}
+
+	typealias NewMessagesObserverCallback = ( Message[] )->Void
+
+	@lazy var _observers : NewMessagesObserverCallback[] = []
+
+	func addIncomingMessageObserver( observer:NewMessagesObserverCallback ) {
+		_observers.append(observer)
 	}
 	
 }
