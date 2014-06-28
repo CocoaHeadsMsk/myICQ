@@ -127,6 +127,15 @@
 			name = Managers;
 			sourceTree = "<group>";
 		};
+		615A6F9A195F1528006C333D /* Conversations */ = {
+			isa = PBXGroup;
+			children = (
+				70D26913195EC006005904F9 /* ConversationController.swift */,
+				70D268F2195EA733005904F9 /* ConversationViewController.swift */,
+			);
+			name = Conversations;
+			sourceTree = "<group>";
+		};
 		616EB9D0195EC16200D0D37A /* Transport */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,13 +167,12 @@
 		70D268ED195EA733005904F9 /* myICQ */ = {
 			isa = PBXGroup;
 			children = (
+				615A6F9A195F1528006C333D /* Conversations */,
 				1CE7D71B195ED928005F495B /* ContactList */,
 				61523387195EE091005A09D5 /* Managers */,
 				61523382195EC3C0005A09D5 /* Services */,
 				616EB9D0195EC16200D0D37A /* Transport */,
 				70D2690F195EB431005904F9 /* Data */,
-				70D26913195EC006005904F9 /* ConversationController.swift */,
-				70D268F2195EA733005904F9 /* ConversationViewController.swift */,
 				70D268F0195EA733005904F9 /* AppDelegate.swift */,
 				70D268F4195EA733005904F9 /* SecondViewController.swift */,
 				70D268F6195EA733005904F9 /* Main.storyboard */,

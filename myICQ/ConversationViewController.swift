@@ -14,6 +14,8 @@ class ConversationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var textField: UITextField
 
 	@lazy var _conversationController:ConversationController = ConversationController()
+
+	var _messages: Message[]  = []
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -37,8 +39,6 @@ class ConversationViewController: UIViewController, UITextFieldDelegate {
 	func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
 		return 1
 	}
-
-	var _messages: Message[]  = [];
 
 	func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
 		return _messages.count
@@ -64,14 +64,12 @@ class ConversationViewController: UIViewController, UITextFieldDelegate {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
-
-    func textFieldShouldReturn(textField: UITextField!) -> Bool{
-     textField.resignFirstResponder()
-        return true
-    
-        
-    }
-
-
+	
+	func textFieldShouldReturn(textField: UITextField!) -> Bool{
+		textField.resignFirstResponder()
+		return true
+		
+		
+	}
 }
 

@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 @objc (Contact)
-class Contact: NSManagedObject, Equatable {
+class Contact: NSManagedObject {
 
 	@NSManaged var name: String
 	@NSManaged var nickname: String
@@ -19,8 +19,4 @@ class Contact: NSManagedObject, Equatable {
 	class func MR_entityName() -> NSString {
 		return "Contact"
 	}
-}
-
-func ==(lhs: Contact, rhs: Contact) -> Bool {
-	return lhs === rhs
 }

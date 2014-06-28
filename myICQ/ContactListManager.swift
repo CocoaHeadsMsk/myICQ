@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 class ContactListManager {
 	
@@ -16,7 +17,7 @@ class ContactListManager {
 		
 	}
 	
-	class func sharedInstance() -> ContactListManager {
+	class var sharedInstance: ContactListManager {
 		struct Static {
 			static var instance: ContactListManager? = nil
 			static var onceToken: dispatch_once_t = 0
@@ -32,7 +33,7 @@ class ContactListManager {
 	func genarateContacts() {
 		MagicalRecord.saveUsingCurrentThreadContextWithBlockAndWait() { context in
 			let count = self.contactList.count
-			for index in 0..10 {
+			for index in 1...10 {
 				var contact = Contact.MR_createInContext(context) as Contact
 				contact.name = "ContactName\(count + index)"
 				contact.nickname = "ContactNickname\(count + index)"
@@ -41,17 +42,15 @@ class ContactListManager {
 		}
 	}
 	
-	func addContact(contact: Contact) {
-		// TODO: send to server
-		contactList += contact
+	func addContact(block: Contact? -> Void) {
+		var contact: Contact? = nil
 		
-		ContactListService.sharedInstance().addContact(contact)
-	}
-	
-	func addContacts(contacts: Contact[]) {
-		contactList += contacts
-		
-		ContactListService.sharedInstance().addContacts(contacts)
+		MagicalRecord.saveUsingCurrentThreadContextWithBlock({ localContext in
+			contact = self._createContactInContext(localContext)
+			self.contactList += contact!
+			ContactListService.sharedInstance().addContact(contact!)
+			},
+			completion: { success, error in block(contact) })
 	}
 	
 	func removeContact(contact: Contact) {
@@ -59,7 +58,7 @@ class ContactListManager {
 			contactList.removeAtIndex(index)
 		}
 		
-		ContactListService.sharedInstance().addContact(contact)
+		ContactListService.sharedInstance().removeContact(contact)
 	}
 	
 	func renameContact(contact: Contact, newName: String) {
@@ -67,9 +66,17 @@ class ContactListManager {
 		ContactListService.sharedInstance().renameContact(contact, newName: newName)
 	}
 	
+	func _createContactInContext(context: NSManagedObjectContext) -> Contact {
+		let index = self.contactList.count + 1
+		var contact = Contact.MR_createInContext(context) as Contact
+		contact.name = "ContactName\(index)"
+		contact.nickname = "ContactNickname\(index)"
+		return contact
+	}
+	
 	func _indexOfContact(contact: Contact) -> Int? {
 		for (index, objectInArray) in enumerate(contactList) {
-			if objectInArray == contact {
+			if objectInArray === contact {
 				return index
 			}
 		}

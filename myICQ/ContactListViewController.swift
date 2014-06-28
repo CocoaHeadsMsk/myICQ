@@ -12,36 +12,47 @@ class ContactListViewController : UITableViewController {
     
     let kCellIdentifier = "ContactCell"
     
-    var contacts: Contact[] = []
-    
-    var contactManager = ContactListManager.sharedInstance()
-    
+	var contacts: Contact[] {
+	get {
+		return ContactListManager.sharedInstance.contactList
+	}
+	}
+	
     init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
-        fetchContacts()
     }
     
     init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!)
     {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        fetchContacts()
     }
     
     init(style: UITableViewStyle)
     {
         super.init(style: style)
-        fetchContacts()
-    }
-    
-    func fetchContacts() -> Void {
-        contacts = contactManager.contactList
     }
     
     override func viewDidLoad() {
 
         self.navigationItem.title = "Contacts"
-        
+		
+		self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addContact:")
+		
+		self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Generate", style: .Plain, target: self, action: "genarateContacts:")
     }
+	
+	func genarateContacts(barButtonItem: UIBarButtonItem) {
+		ContactListManager.sharedInstance.genarateContacts()
+		self.tableView.reloadData()
+	}
+	
+	func addContact(barButtonItem: UIBarButtonItem) {
+		ContactListManager.sharedInstance.addContact() { contact in
+			if contact {
+				self.tableView.reloadData()
+			}
+		}
+	}
     
     override func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
         return 1
@@ -52,18 +63,15 @@ class ContactListViewController : UITableViewController {
 
         var cell = obj as UITableViewCell
         
-        let contact:Contact = contacts[indexPath.row] as Contact
-        
-        
+        let contact = contacts[indexPath.row]
+		
         cell.detailTextLabel.text = contact.name
         cell.textLabel.text = contact.nickname
         
-        return cell as UITableViewCell
-        
+        return cell
     }
     
     override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
-        var i = contacts.count
         return contacts.count
     }
 }
