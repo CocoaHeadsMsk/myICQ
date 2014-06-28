@@ -24,23 +24,43 @@ class MessageManager {
 		return Static.instance!
 	}
 
-	func _pushMessage(msg: Message) {
+	func _pushMessages(msg: Message[]) {
 		for observer:MessageObserverCallback in _observers {
-			observer([msg]);
+			observer(msg);
 		}
 	}
 
-	func runTestMessagesTimer() {
-		var delay = Int64(NSEC_PER_SEC) * 10;
+	var _messageCounter: Int = 1
+
+	func generateTestMessages()->Message[] {
+		var result: Message[] = []
+		MagicalRecord.saveUsingCurrentThreadContextWithBlockAndWait( { context in
+
+			for i:Int in 1..10 {
+				var msg: Message = Message.MR_createInContext(context) as Message
+				msg.text = "test message \(self._messageCounter)"
+				++self._messageCounter
+				result += msg
+			}
+			}
+		)
+		return result
+	}
+
+	func _runTestMessagesTimer() {
+		var delay = Int64(NSEC_PER_SEC) * 1;
 		dispatch_after(dispatch_time(DISPATCH_TIME_NOW, delay),
 			dispatch_get_main_queue()) {
 
-				self.runTestMessagesTimer()
+				var testMessages: Message[] = self.generateTestMessages()
+				self._pushMessages(testMessages)
+
+				self._runTestMessagesTimer()
 			}
 	}
 
 	@required init() {
-
+		self._runTestMessagesTimer()
 	}
 
 	@lazy var _observers : MessageObserverCallback[] = []
