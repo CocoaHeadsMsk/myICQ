@@ -8,9 +8,10 @@
 
 import UIKit
 
-class ConversationViewController: UIViewController {
+class ConversationViewController: UIViewController, UITextFieldDelegate {
 
 	@IBOutlet var _tableView: UITableView
+    @IBOutlet var textField: UITextField
 
 	@lazy var _conversationController:ConversationController = ConversationController()
 	
@@ -63,6 +64,13 @@ class ConversationViewController: UIViewController {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
+
+    func textFieldShouldReturn(textField: UITextField!) -> Bool{
+     textField.resignFirstResponder()
+        return true
+    
+        
+    }
 
 
 }
