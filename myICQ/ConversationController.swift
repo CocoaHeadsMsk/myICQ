@@ -53,4 +53,8 @@ class ConversationController {
 		_observers.append(observer)
 	}
 	
+    func sendMessage(message : String) -> Void{
+        var msg = MessageManager.sharedInstance().generateMessageWithText(message)
+        MessageManager.sharedInstance()._pushMessages([msg])
+    }
 }

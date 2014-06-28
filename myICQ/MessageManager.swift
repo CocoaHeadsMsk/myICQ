@@ -47,6 +47,15 @@ class MessageManager {
 		return result
 	}
 
+    func generateMessageWithText(text : String) -> Message {
+        var msg :Message? = nil
+        MagicalRecord.saveUsingCurrentThreadContextWithBlockAndWait({ context in
+            msg = Message.MR_createEntity() as? Message
+            msg!.text = text
+            })
+        return msg!
+    }
+    
 	func _runTestMessagesTimer() {
 		var delay = Int64(NSEC_PER_SEC) * 2;
 		dispatch_after(dispatch_time(DISPATCH_TIME_NOW, delay),
