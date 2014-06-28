@@ -13,6 +13,7 @@
 		70D268F8195EA733005904F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70D268F6195EA733005904F9 /* Main.storyboard */; };
 		70D268FA195EA733005904F9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70D268F9195EA733005904F9 /* Images.xcassets */; };
 		70D26906195EA733005904F9 /* myICQTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D26905195EA733005904F9 /* myICQTests.swift */; };
+		70D26912195EB44A005904F9 /* myICQ.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70D26910195EB44A005904F9 /* myICQ.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		70D268FF195EA733005904F9 /* myICQTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myICQTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		70D26904195EA733005904F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70D26905195EA733005904F9 /* myICQTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myICQTests.swift; sourceTree = "<group>"; };
+		70D26911195EB44A005904F9 /* myICQ.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = myICQ.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		70D268ED195EA733005904F9 /* myICQ */ = {
 			isa = PBXGroup;
 			children = (
+				70D2690F195EB431005904F9 /* Data */,
 				70D268F0195EA733005904F9 /* AppDelegate.swift */,
 				70D268F2195EA733005904F9 /* FirstViewController.swift */,
 				70D268F4195EA733005904F9 /* SecondViewController.swift */,
@@ -110,6 +113,14 @@
 				70D26904195EA733005904F9 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		70D2690F195EB431005904F9 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				70D26910195EB44A005904F9 /* myICQ.xcdatamodeld */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70D268F5195EA733005904F9 /* SecondViewController.swift in Sources */,
+				70D26912195EB44A005904F9 /* myICQ.xcdatamodeld in Sources */,
 				70D268F1195EA733005904F9 /* AppDelegate.swift in Sources */,
 				70D268F3195EA733005904F9 /* FirstViewController.swift in Sources */,
 			);
@@ -403,6 +415,7 @@
 				70D2690B195EA733005904F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		70D2690C195EA733005904F9 /* Build configuration list for PBXNativeTarget "myICQTests" */ = {
 			isa = XCConfigurationList;
@@ -411,8 +424,22 @@
 				70D2690E195EA733005904F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		70D26910195EB44A005904F9 /* myICQ.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				70D26911195EB44A005904F9 /* myICQ.xcdatamodel */,
+			);
+			currentVersion = 70D26911195EB44A005904F9 /* myICQ.xcdatamodel */;
+			path = myICQ.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 70D268E3195EA733005904F9 /* Project object */;
 }
