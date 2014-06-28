@@ -23,6 +23,7 @@
 		70D26916195EC194005904F9 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D26915195EC194005904F9 /* Message.swift */; };
 		70D26919195EC1AB005904F9 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D26918195EC1AB005904F9 /* Contact.swift */; };
 		70D2691B195EC1B6005904F9 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D2691A195EC1B6005904F9 /* Profile.swift */; };
+		70D2691D195ED8F3005904F9 /* MessageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D2691C195ED8F3005904F9 /* MessageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		70D26915195EC194005904F9 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = CoreData/Message.swift; sourceTree = "<group>"; };
 		70D26918195EC1AB005904F9 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = CoreData/Contact.swift; sourceTree = "<group>"; };
 		70D2691A195EC1B6005904F9 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Profile.swift; path = CoreData/Profile.swift; sourceTree = "<group>"; };
+		70D2691C195ED8F3005904F9 /* MessageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageManager.swift; sourceTree = "<group>"; };
 		BC0A94E66F344C18824FDA81 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				61523383195EC464005A09D5 /* CLService.swift */,
+				70D2691C195ED8F3005904F9 /* MessageManager.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				70D2691B195EC1B6005904F9 /* Profile.swift in Sources */,
 				70D26914195EC006005904F9 /* ConversationController.swift in Sources */,
 				70D26912195EB44A005904F9 /* myICQ.xcdatamodeld in Sources */,
+				70D2691D195ED8F3005904F9 /* MessageManager.swift in Sources */,
 				70D26916195EC194005904F9 /* Message.swift in Sources */,
 				70D268F1195EA733005904F9 /* AppDelegate.swift in Sources */,
 				70D268F3195EA733005904F9 /* FirstViewController.swift in Sources */,

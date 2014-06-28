@@ -1,1 +1,2 @@
 pod 'AFNetworking'
+pod 'MagicalRecord'
