@@ -1,5 +1,5 @@
 //
-//  CLService.swift
+//  ContactListService.swift
 //  myICQ
 //
 //  Created by Ruslan Ahapkin on 28.06.14.
@@ -8,7 +8,8 @@
 
 import Foundation
 
-class CLService {
+class ContactListService {
+	
 	func contactList() -> Contact[] {
 		var contactList = Contact[]()
 		for index in 0..10 {
@@ -17,5 +18,18 @@ class CLService {
 			contact.nickname = "ContactNickname\(index)"
 		}
 		return contactList
+	}
+	
+	func addContact(contact: Contact) {
+		// TODO: send to server
+	}
+	
+	func addContacts(constacts: Contact[]) {
+		// TODO: send to server
+	}
+	
+	func renameContact(contact: Contact, newName: String) {
+		// TODO: save in core data and send new name to server.
+		contact.name = newName
 	}
 }
