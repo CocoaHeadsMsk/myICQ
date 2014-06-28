@@ -9,15 +9,16 @@
 import Foundation
 import CoreData
 
-class Contact: Equatable {
+@objc (Contact)
+class Contact: NSManagedObject, Equatable {
 
-	var name: String = ""
-	var nickname: String = ""
+	@NSManaged var name: String
+	@NSManaged var nickname: String
 	
-//	init(entity: NSEntityDescription!, insertIntoManagedObjectContext context: NSManagedObjectContext!) {
-//		super.init(entity: entity, insertIntoManagedObjectContext: context)
-//	}
-
+	@objc(MR_entityName)
+	class func MR_entityName() -> NSString {
+		return "Contact"
+	}
 }
 
 func ==(lhs: Contact, rhs: Contact) -> Bool {

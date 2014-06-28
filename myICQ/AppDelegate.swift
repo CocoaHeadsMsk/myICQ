@@ -12,18 +12,20 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
                             
 	var window: UIWindow?
-
-
+	
+	init() {
+		MagicalRecord.setupCoreDataStack();
+	}
+	
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
 		// Override point for customization after application launch.
-		MagicalRecord.setupCoreDataStack();
 
-		MessageManager.sharedInstance().addIncomingMessageObserver({messages in
+		MessageManager.sharedInstance().addIncomingMessageObserver(){ messages in
 			for msg:Message in messages {
 				println("Message text = [\(msg.text)]")
 			}
-			})
-
+		}
+		
 		return true
 	}
 

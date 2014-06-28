@@ -12,11 +12,13 @@ class ContactListManager {
 	
 	@lazy var contactList: Contact[] = {
 		var contactList = Contact[]()
-		for index in 0..10 {
-			var contact = Contact()
-			contact.name = "ContactName\(index)"
-			contact.nickname = "ContactNickname\(index)"
-			contactList += contact
+		MagicalRecord.saveUsingCurrentThreadContextWithBlockAndWait() { context in
+			for index in 0..10 {
+				var contact = Contact.MR_createInContext(context) as Contact
+				contact.name = "ContactName\(index)"
+				contact.nickname = "ContactNickname\(index)"
+				contactList += contact
+			}
 		}
 		return contactList
 		}()
@@ -55,7 +57,7 @@ class ContactListManager {
 		if let index = _indexOfContact(contact) {
 			contactList.removeAtIndex(index)
 		}
-
+		
 		ContactListService.sharedInstance().addContact(contact)
 	}
 	
