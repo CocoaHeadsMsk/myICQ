@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ConversationViewController: UIViewController, UITextFieldDelegate {
+class ConversationViewController: UIViewController, UITableViewDelegate, UITextFieldDelegate {
 
 	@IBOutlet var _tableView: UITableView
     @IBOutlet var textField: UITextField
@@ -18,6 +18,8 @@ class ConversationViewController: UIViewController, UITextFieldDelegate {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		_messages = _conversationController.loadMessages()
+        
+        _tableView.allowsSelection = false
 		/*_conversationController.addIncomingMessageObserver(){ messages in
 
 			var indexPaths = AnyObject[]()
@@ -71,7 +73,10 @@ class ConversationViewController: UIViewController, UITextFieldDelegate {
     
         
     }
-
-
+    
+    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!){
+            tableView.deselectRowAtIndexPath(indexPath, animated: false)
+    }
+    
 }
 
