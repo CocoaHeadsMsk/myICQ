@@ -72,9 +72,8 @@ class ContactListViewController : UITableViewController {
     }
     
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-        var obj : AnyObject! = tableView.dequeueReusableCellWithIdentifier(kCellIdentifier, forIndexPath: indexPath)
 
-        var cell = obj as UITableViewCell
+        var cell = tableView.dequeueReusableCellWithIdentifier(kCellIdentifier, forIndexPath: indexPath) as UITableViewCell
         
         let contact = contacts[indexPath.row]
 		
