@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Table View Controller - Contacts-->
         <scene sceneID="Nfn-wj-adj">
             <objects>
                 <tableViewController id="j3p-WA-3cD" sceneMemberID="viewController">
@@ -26,6 +26,7 @@
                             <outlet property="delegate" destination="j3p-WA-3cD" id="8za-W6-Ot3"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Contacts" id="nLg-Cs-RXS"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mkj-k2-pl4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -153,6 +154,7 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="j3p-WA-3cD" kind="relationship" relationship="viewControllers" id="WA2-5l-xJY"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>

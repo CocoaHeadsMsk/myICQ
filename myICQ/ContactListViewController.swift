@@ -14,7 +14,7 @@ class ContactListViewController : UITableViewController {
     
     var contacts: NSArray = []
     
-    var service = ContactListService()
+    var contactManager = ContactListManager()
     
     init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!)
     {
@@ -29,6 +29,6 @@ class ContactListViewController : UITableViewController {
     }
     
     func fetchContacts() -> Void {
-        contacts = service.contactList()
+        contacts = contactManager.contactList
     }
 }
