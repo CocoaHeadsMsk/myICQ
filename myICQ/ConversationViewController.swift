@@ -8,10 +8,15 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class FirstViewController: UITableViewController {
                             
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		MessageManager.sharedInstance().addIncomingMessageObserver(){ messages in
+			for msg:Message in messages {
+
+			}
+		}
 		// Do any additional setup after loading the view, typically from a nib.
 	}
 

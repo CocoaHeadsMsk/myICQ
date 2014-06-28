@@ -9,7 +9,12 @@
 import Foundation
 import CoreData
 
+@objc (Message)
 class Message : NSManagedObject {
+	@NSManaged var text: String
 
-
+	@objc(MR_entityName)
+	class func MR_entityName()->NSString {
+		return "Message"
+	}
 }
