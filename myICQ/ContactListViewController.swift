@@ -16,6 +16,11 @@ class ContactListViewController : UITableViewController {
     
     var contactManager = ContactListManager()
     
+    init(coder aDecoder: NSCoder!) {
+        super.init(coder: aDecoder)
+        fetchContacts()
+    }
+    
     init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!)
     {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -30,5 +35,11 @@ class ContactListViewController : UITableViewController {
     
     func fetchContacts() -> Void {
         contacts = contactManager.contactList
+    }
+    
+    override func viewDidLoad() {
+
+        self.navigationItem.title = "Contacts"
+        
     }
 }
