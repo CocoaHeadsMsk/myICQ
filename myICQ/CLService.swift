@@ -11,8 +11,10 @@ import Foundation
 class CLService {
 	func contactList() -> Contact[] {
 		var contactList = Contact[]()
-		for _ in 0..10 {
-			contactList += Contact()
+		for index in 0..10 {
+			var contact = Contact()
+			contact.name = "ContactName\(index)"
+			contact.nickname = "ContactNickname\(index)"
 		}
 		return contactList
 	}
