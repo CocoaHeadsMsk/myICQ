@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1DEBB8EB61804B2FA2C2F754 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0A94E66F344C18824FDA81 /* libPods.a */; };
-		61523384195EC464005A09D5 /* CLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61523383195EC464005A09D5 /* CLService.swift */; };
-		61523385195EC464005A09D5 /* CLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61523383195EC464005A09D5 /* CLService.swift */; };
+		61523384195EC464005A09D5 /* ContactListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61523383195EC464005A09D5 /* ContactListService.swift */; };
+		61523385195EC464005A09D5 /* ContactListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61523383195EC464005A09D5 /* ContactListService.swift */; };
 		616EB9D2195EC19400D0D37A /* TransportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616EB9D1195EC19400D0D37A /* TransportService.swift */; };
 		616EB9D3195EC19400D0D37A /* TransportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616EB9D1195EC19400D0D37A /* TransportService.swift */; };
 		70D268F1195EA733005904F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D268F0195EA733005904F9 /* AppDelegate.swift */; };
@@ -38,7 +38,7 @@
 
 /* Begin PBXFileReference section */
 		2FD043F53C3044EA94713523 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
-		61523383195EC464005A09D5 /* CLService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLService.swift; sourceTree = "<group>"; };
+		61523383195EC464005A09D5 /* ContactListService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListService.swift; sourceTree = "<group>"; };
 		616EB9C8195EBB1500D0D37A /* myICQ-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "myICQ-Bridging-Header.h"; sourceTree = "<group>"; };
 		616EB9C9195EBB1500D0D37A /* myICQTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "myICQTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		616EB9CD195EBF5300D0D37A /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
@@ -92,8 +92,8 @@
 		61523382195EC3C0005A09D5 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				61523383195EC464005A09D5 /* CLService.swift */,
 				70D2691C195ED8F3005904F9 /* MessageManager.swift */,
+				61523383195EC464005A09D5 /* ContactListService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -324,7 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61523384195EC464005A09D5 /* CLService.swift in Sources */,
+				61523384195EC464005A09D5 /* ContactListService.swift in Sources */,
 				70D268F5195EA733005904F9 /* SecondViewController.swift in Sources */,
 				616EB9D2195EC19400D0D37A /* TransportService.swift in Sources */,
 				70D2691B195EC1B6005904F9 /* Profile.swift in Sources */,
@@ -342,7 +342,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61523385195EC464005A09D5 /* CLService.swift in Sources */,
+				61523385195EC464005A09D5 /* ContactListService.swift in Sources */,
 				70D26906195EA733005904F9 /* myICQTests.swift in Sources */,
 				616EB9D3195EC19400D0D37A /* TransportService.swift in Sources */,
 			);

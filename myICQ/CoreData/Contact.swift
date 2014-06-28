@@ -11,5 +11,11 @@ import CoreData
 
 class Contact : NSManagedObject {
 
+	var name: String = ""
+	var nickname: String = ""
+	
+	init(entity: NSEntityDescription!, insertIntoManagedObjectContext context: NSManagedObjectContext!) {
+		super.init(entity: entity, insertIntoManagedObjectContext: context)
+	}
 
 }
