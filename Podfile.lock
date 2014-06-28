@@ -20,11 +20,16 @@ PODS:
   - AFNetworking/UIKit (2.3.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - MagicalRecord (2.2):
+    - MagicalRecord/Core
+  - MagicalRecord/Core (2.2)
 
 DEPENDENCIES:
   - AFNetworking
+  - MagicalRecord
 
 SPEC CHECKSUMS:
   AFNetworking: 6d7b76aa5d04c8c37daad3eef4b7e3f2a7620da3
+  MagicalRecord: 2b471584fc9e3137f3d0a56967917baa4979e224
 
 COCOAPODS: 0.33.1

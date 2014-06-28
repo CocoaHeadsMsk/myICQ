@@ -3,3 +3,5 @@
 //
 
 #import "AFNetworking.h"
+#import "CoreData+MagicalRecord.h"
+#import "NSManagedObject+MagicalRecord.h"

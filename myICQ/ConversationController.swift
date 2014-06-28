@@ -12,12 +12,20 @@ class ConversationController {
 
 	@lazy var _loadedMessages :Array<Message> = self.loadMessages()
 
-	func loadMessages() -> Array<Message> {
-		return []
+	func loadMessages() -> Message[] {
+
+		var result = Message[]()
+
+		MagicalRecord.saveUsingCurrentThreadContextWithBlockAndWait( { context in
+			result = Message.MR_findAllWithPredicate(nil, inContext: context) as Array<Message>
+			}
+		)
+
+		return result
 	}
 	
 	init() {
-		_loadedMessages = []
+		
 	}
 
 	func messageAtIndex(index: Int) -> Message {
