@@ -10,18 +10,7 @@ import Foundation
 
 class ContactListManager {
 	
-	@lazy var contactList: Contact[] = {
-		var contactList = Contact[]()
-		MagicalRecord.saveUsingCurrentThreadContextWithBlockAndWait() { context in
-			for index in 0..10 {
-				var contact = Contact.MR_createInContext(context) as Contact
-				contact.name = "ContactName\(index)"
-				contact.nickname = "ContactNickname\(index)"
-				contactList += contact
-			}
-		}
-		return contactList
-		}()
+	@lazy var contactList: Contact[] = Contact.MR_findAll() as Contact[]
 	
 	@required init() {
 		
@@ -38,6 +27,18 @@ class ContactListManager {
 		}
 		
 		return Static.instance!
+	}
+	
+	func genarateContacts() {
+		MagicalRecord.saveUsingCurrentThreadContextWithBlockAndWait() { context in
+			let count = self.contactList.count
+			for index in 0..10 {
+				var contact = Contact.MR_createInContext(context) as Contact
+				contact.name = "ContactName\(count + index)"
+				contact.nickname = "ContactNickname\(count + index)"
+				self.contactList += contact
+			}
+		}
 	}
 	
 	func addContact(contact: Contact) {
