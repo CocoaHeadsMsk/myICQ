@@ -31,6 +31,7 @@
 		2FD043F53C3044EA94713523 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		616EB9C8195EBB1500D0D37A /* myICQ-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "myICQ-Bridging-Header.h"; sourceTree = "<group>"; };
 		616EB9C9195EBB1500D0D37A /* myICQTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "myICQTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		616EB9CD195EBF5300D0D37A /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		70D268EB195EA733005904F9 /* myICQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myICQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70D268EF195EA733005904F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70D268F0195EA733005904F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +105,7 @@
 				70D268EE195EA733005904F9 /* Supporting Files */,
 				616EB9C8195EBB1500D0D37A /* myICQ-Bridging-Header.h */,
 				616EB9C9195EBB1500D0D37A /* myICQTests-Bridging-Header.h */,
+				616EB9CD195EBF5300D0D37A /* MyPlayground.playground */,
 			);
 			path = myICQ;
 			sourceTree = "<group>";
