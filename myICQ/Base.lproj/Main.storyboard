@@ -188,11 +188,11 @@
             </objects>
             <point key="canvasLocation" x="2283" y="965"/>
         </scene>
-        <!--Navigation Controller - Contacts-->
+        <!--Navigation Controller-->
         <scene sceneID="uyW-up-hGk">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cL7-xt-aiL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Contacts" id="nLg-Cs-RXS"/>
+                    <tabBarItem key="tabBarItem" badgeValue="wow!" selectedImage="icq" systemItem="contacts" id="nLg-Cs-RXS"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZBC-5r-yb0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -210,6 +210,7 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="icq" width="263" height="192"/>
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
