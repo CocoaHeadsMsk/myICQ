@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1CE7D71D195ED987005F495B /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE7D71C195ED987005F495B /* ContactListViewController.swift */; };
 		1DEBB8EB61804B2FA2C2F754 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0A94E66F344C18824FDA81 /* libPods.a */; };
 		61523384195EC464005A09D5 /* ContactListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61523383195EC464005A09D5 /* ContactListService.swift */; };
 		61523385195EC464005A09D5 /* ContactListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61523383195EC464005A09D5 /* ContactListService.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1CE7D71C195ED987005F495B /* ContactListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
 		2FD043F53C3044EA94713523 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		61523383195EC464005A09D5 /* ContactListService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListService.swift; sourceTree = "<group>"; };
 		616EB9C8195EBB1500D0D37A /* myICQ-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "myICQ-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -87,6 +89,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1CE7D71B195ED928005F495B /* ContactList */ = {
+			isa = PBXGroup;
+			children = (
+				1CE7D71C195ED987005F495B /* ContactListViewController.swift */,
+			);
+			name = ContactList;
+			sourceTree = "<group>";
+		};
 		61523382195EC3C0005A09D5 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +136,7 @@
 		70D268ED195EA733005904F9 /* myICQ */ = {
 			isa = PBXGroup;
 			children = (
+				1CE7D71B195ED928005F495B /* ContactList */,
 				61523382195EC3C0005A09D5 /* Services */,
 				616EB9D0195EC16200D0D37A /* Transport */,
 				70D2690F195EB431005904F9 /* Data */,
@@ -331,6 +342,7 @@
 				70D268F1195EA733005904F9 /* AppDelegate.swift in Sources */,
 				70D268F3195EA733005904F9 /* FirstViewController.swift in Sources */,
 				70D26919195EC1AB005904F9 /* Contact.swift in Sources */,
+				1CE7D71D195ED987005F495B /* ContactListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
