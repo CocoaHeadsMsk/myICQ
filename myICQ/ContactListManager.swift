@@ -16,6 +16,7 @@ class ContactListManager {
 			var contact = Contact()
 			contact.name = "ContactName\(index)"
 			contact.nickname = "ContactNickname\(index)"
+            contactList += contact
 		}
 		return contactList
 		}()

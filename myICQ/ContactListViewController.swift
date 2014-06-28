@@ -10,7 +10,7 @@ import Foundation
 
 class ContactListViewController : UITableViewController {
     
-    let kCellIdentifier = "CellIdentifier"
+    let kCellIdentifier = "ContactCell"
     
     var contacts: NSArray = []
     
@@ -41,5 +41,29 @@ class ContactListViewController : UITableViewController {
 
         self.navigationItem.title = "Contacts"
         
+    }
+    
+    override func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
+        return 1
+    }
+    
+    override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+        var obj : AnyObject! = tableView.dequeueReusableCellWithIdentifier(kCellIdentifier, forIndexPath: indexPath)
+
+        var cell = obj as UITableViewCell
+        
+        let contact:Contact = contacts[indexPath.row] as Contact
+        
+        
+        cell.detailTextLabel.text = contact.name
+        cell.textLabel.text = contact.nickname
+        
+        return cell as UITableViewCell
+        
+    }
+    
+    override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+        var i = contacts.count
+        return contacts.count
     }
 }
