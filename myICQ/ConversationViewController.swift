@@ -8,13 +8,17 @@
 
 import UIKit
 
-class ConversationViewController: UIViewController, UITableViewDelegate, UITextFieldDelegate {
+let animationDuration = 1.0
+
+class ConversationViewController: UIViewController, UITableViewDelegate, UITextFieldDelegate, UIScrollViewDelegate {
 	
 	@IBOutlet var _tableView: UITableView
 	@IBOutlet var textField: UITextField
+    @IBOutlet var scrollButton: UIButton
 	
 	@lazy var _conversationController:ConversationController = ConversationController()
 	
+    var traking: Bool = true
 	var _messages: Message[]  = []
 	
 	override func viewDidLoad() {
@@ -22,23 +26,47 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITextF
 		_messages = _conversationController.loadMessages()
 		
 		_tableView.allowsSelection = false
-		/*_conversationController.addIncomingMessageObserver(){ messages in
-		
-		var indexPaths = AnyObject[]()
-		self._tableView.beginUpdates();
+        
+		_conversationController.addIncomingMessageObserver(){ messages in
+            
+		var indexPaths = NSIndexPath[]()
+		self._tableView.beginUpdates()
 		for msg:Message in messages {
 		indexPaths.append(NSIndexPath(forRow: self._messages.count, inSection: 0))
 		self._messages.append(msg)
 		}
 		self._tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: UITableViewRowAnimation.Bottom)
 		self._tableView.endUpdates();
-		
-		
-		}*/
+
+            if (self.traking){
+                self._tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self._messages.count - 1, inSection: 0) , atScrollPosition: UITableViewScrollPosition.Middle, animated: true)
+            }
+            
+            
+		}
 
 		self.tabBarItem.badgeValue = String(_messages.count)
+        
+        scrollButton.addTarget(self, action: "scrollToBottomPressed", forControlEvents: .TouchUpInside)
+        scrollButton.hidden = traking
+        
 	}
-	
+    
+    func scrollToBottomPressed() -> Void {
+        
+        traking = true
+//        scrollButton.hidden = traking
+        self._tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self._messages.count - 1, inSection: 0) , atScrollPosition: UITableViewScrollPosition.Middle, animated: true)
+        
+        UIView.animateWithDuration(animationDuration, animations: {
+            self.scrollButton.alpha = 0
+            }, completion: {
+                (value: Bool) in
+                self.scrollButton.hidden = true
+            })
+
+    }
+    
 	func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
 		return 1
 	}
@@ -76,6 +104,18 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITextF
 	func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!){
 		tableView.deselectRowAtIndexPath(indexPath, animated: false)
 	}
+    
+    func scrollViewWillBeginDragging(scrollView: UIScrollView!){
+        traking = false
+        scrollButton.hidden = traking
+        UIView.animateWithDuration(animationDuration, animations: {
+            self.scrollButton.alpha = 1
+            }, completion: {
+                (value: Bool) in
+                self.scrollButton.hidden = false
+            })
+
+    }
 	
 }
 
