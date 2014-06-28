@@ -8,15 +8,29 @@
 
 import UIKit
 
-class ConversationViewController: UIViewController {
-                            
+class ConversationViewController: UIViewController, UITextFieldDelegate {
+
+	@IBOutlet var _tableView: UITableView
+    @IBOutlet var textField: UITextField
+
+	@lazy var _conversationController:ConversationController = ConversationController()
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		MessageManager.sharedInstance().addIncomingMessageObserver(){ messages in
-			for msg:Message in messages {
+		_messages = _conversationController.loadMessages()
+		/*_conversationController.addIncomingMessageObserver(){ messages in
 
+			var indexPaths = AnyObject[]()
+			self._tableView.beginUpdates();
+			for msg:Message in messages {
+				indexPaths.append(NSIndexPath(forRow: self._messages.count, inSection: 0))
+				self._messages.append(msg)
 			}
-		}
+			self._tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: UITableViewRowAnimation.Bottom)
+			self._tableView.endUpdates();
+
+			
+		}*/
 		// Do any additional setup after loading the view, typically from a nib.
 	}
 
@@ -42,7 +56,7 @@ class ConversationViewController: UIViewController {
 		}
 
 		var msg:Message = _messages[indexPath.row]
-		//cell?.textLabel.text = "hello"//msg.text
+		cell!.textLabel.text = msg.text
 		return cell
 	}
 
@@ -50,6 +64,13 @@ class ConversationViewController: UIViewController {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
+
+    func textFieldShouldReturn(textField: UITextField!) -> Bool{
+     textField.resignFirstResponder()
+        return true
+    
+        
+    }
 
 
 }

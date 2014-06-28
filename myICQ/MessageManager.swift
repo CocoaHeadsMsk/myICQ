@@ -36,7 +36,7 @@ class MessageManager {
 		var result: Message[] = []
 		MagicalRecord.saveUsingCurrentThreadContextWithBlockAndWait( { context in
 
-			for i:Int in 1..10 {
+			for i:Int in 1..5 {
 				var msg: Message = Message.MR_createInContext(context) as Message
 				msg.text = "test message \(self._messageCounter)"
 				++self._messageCounter
@@ -48,7 +48,7 @@ class MessageManager {
 	}
 
 	func _runTestMessagesTimer() {
-		var delay = Int64(NSEC_PER_SEC) * 1;
+		var delay = Int64(NSEC_PER_SEC) * 2;
 		dispatch_after(dispatch_time(DISPATCH_TIME_NOW, delay),
 			dispatch_get_main_queue()) {
 
