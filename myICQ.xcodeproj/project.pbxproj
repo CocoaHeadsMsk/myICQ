@@ -19,6 +19,10 @@
 		70D268FA195EA733005904F9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70D268F9195EA733005904F9 /* Images.xcassets */; };
 		70D26906195EA733005904F9 /* myICQTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D26905195EA733005904F9 /* myICQTests.swift */; };
 		70D26912195EB44A005904F9 /* myICQ.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70D26910195EB44A005904F9 /* myICQ.xcdatamodeld */; };
+		70D26914195EC006005904F9 /* ConversationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D26913195EC006005904F9 /* ConversationController.swift */; };
+		70D26916195EC194005904F9 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D26915195EC194005904F9 /* Message.swift */; };
+		70D26919195EC1AB005904F9 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D26918195EC1AB005904F9 /* Contact.swift */; };
+		70D2691B195EC1B6005904F9 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D2691A195EC1B6005904F9 /* Profile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		70D26904195EA733005904F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70D26905195EA733005904F9 /* myICQTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myICQTests.swift; sourceTree = "<group>"; };
 		70D26911195EB44A005904F9 /* myICQ.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = myICQ.xcdatamodel; sourceTree = "<group>"; };
+		70D26913195EC006005904F9 /* ConversationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationController.swift; sourceTree = "<group>"; };
+		70D26915195EC194005904F9 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = CoreData/Message.swift; sourceTree = "<group>"; };
+		70D26918195EC1AB005904F9 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = CoreData/Contact.swift; sourceTree = "<group>"; };
+		70D2691A195EC1B6005904F9 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Profile.swift; path = CoreData/Profile.swift; sourceTree = "<group>"; };
 		BC0A94E66F344C18824FDA81 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -121,6 +129,7 @@
 				61523382195EC3C0005A09D5 /* Services */,
 				616EB9D0195EC16200D0D37A /* Transport */,
 				70D2690F195EB431005904F9 /* Data */,
+				70D26913195EC006005904F9 /* ConversationController.swift */,
 				70D268F0195EA733005904F9 /* AppDelegate.swift */,
 				70D268F2195EA733005904F9 /* FirstViewController.swift */,
 				70D268F4195EA733005904F9 /* SecondViewController.swift */,
@@ -162,9 +171,20 @@
 		70D2690F195EB431005904F9 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				70D26917195EC197005904F9 /* CoreData */,
 				70D26910195EB44A005904F9 /* myICQ.xcdatamodeld */,
 			);
 			name = Data;
+			sourceTree = "<group>";
+		};
+		70D26917195EC197005904F9 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				70D26915195EC194005904F9 /* Message.swift */,
+				70D26918195EC1AB005904F9 /* Contact.swift */,
+				70D2691A195EC1B6005904F9 /* Profile.swift */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,9 +324,13 @@
 				61523384195EC464005A09D5 /* CLService.swift in Sources */,
 				70D268F5195EA733005904F9 /* SecondViewController.swift in Sources */,
 				616EB9D2195EC19400D0D37A /* TransportService.swift in Sources */,
+				70D2691B195EC1B6005904F9 /* Profile.swift in Sources */,
+				70D26914195EC006005904F9 /* ConversationController.swift in Sources */,
 				70D26912195EB44A005904F9 /* myICQ.xcdatamodeld in Sources */,
+				70D26916195EC194005904F9 /* Message.swift in Sources */,
 				70D268F1195EA733005904F9 /* AppDelegate.swift in Sources */,
 				70D268F3195EA733005904F9 /* FirstViewController.swift in Sources */,
+				70D26919195EC1AB005904F9 /* Contact.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
