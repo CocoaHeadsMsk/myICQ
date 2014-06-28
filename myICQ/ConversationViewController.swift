@@ -35,7 +35,8 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITextF
 		
 		
 		}*/
-		// Do any additional setup after loading the view, typically from a nib.
+
+		self.tabBarItem.badgeValue = String(_messages.count)
 	}
 	
 	func numberOfSectionsInTableView(tableView: UITableView!) -> Int {

@@ -39,7 +39,7 @@ class ContactListService {
 		// TODO: send to server
 	}
 	
-	func renameContact(contact: Contact, newName: String) {
+	func updateContact(contact: Contact) {
 		// TODO: send new name to server.
 	}
 }

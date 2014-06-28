@@ -63,9 +63,11 @@ class ContactListManager {
 		}
 	}
 	
-	func renameContact(contact: Contact, newName: String) {
-		// TODO: save in core data and send new name to server.
-		ContactListService.sharedInstance().renameContact(contact, newName: newName)
+	func updateContact(contact: Contact) {
+		MagicalRecord.saveUsingCurrentThreadContextWithBlockAndWait() { context in
+			// TODO: save in core data and send new name to server.
+			ContactListService.sharedInstance().updateContact(contact)
+		}
 	}
 	
 	func _createContactInContext(context: NSManagedObjectContext) -> Contact {

@@ -41,17 +41,30 @@ class ContactListViewController : UITableViewController {
 		self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Generate", style: .Plain, target: self, action: "genarateContacts:")
     }
 	
+	override func viewWillAppear(animated: Bool) {
+		updateBadge()
+	}
+	
 	func genarateContacts(barButtonItem: UIBarButtonItem) {
 		ContactListManager.sharedInstance.genarateContacts()
-		self.tableView.reloadData()
+		updateUI()
 	}
 	
 	func addContact(barButtonItem: UIBarButtonItem) {
 		ContactListManager.sharedInstance.addContact() { contact in
 			if contact {
-				self.tableView.reloadData()
+				self.updateUI()
 			}
 		}
+	}
+	
+	func updateBadge() {
+		self.navigationController.tabBarItem.badgeValue = String(contacts.count)
+	}
+	
+	func updateUI() {
+		updateBadge()
+		self.tableView.reloadData()
 	}
     
     override func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
@@ -86,7 +99,7 @@ class ContactListViewController : UITableViewController {
 	override func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
 		if editingStyle == .Delete {
 			ContactListManager.sharedInstance.removeContact(contacts[indexPath.row])
-			self.tableView.reloadData()
+			updateUI()
 		}
 	}
 	

@@ -17,7 +17,6 @@
 		616EB9D3195EC19400D0D37A /* TransportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616EB9D1195EC19400D0D37A /* TransportService.swift */; };
 		70D268F1195EA733005904F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D268F0195EA733005904F9 /* AppDelegate.swift */; };
 		70D268F3195EA733005904F9 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D268F2195EA733005904F9 /* ConversationViewController.swift */; };
-		70D268F5195EA733005904F9 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D268F4195EA733005904F9 /* SecondViewController.swift */; };
 		70D268F8195EA733005904F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70D268F6195EA733005904F9 /* Main.storyboard */; };
 		70D268FA195EA733005904F9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70D268F9195EA733005904F9 /* Images.xcassets */; };
 		70D26906195EA733005904F9 /* myICQTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D26905195EA733005904F9 /* myICQTests.swift */; };
@@ -52,7 +51,6 @@
 		70D268EF195EA733005904F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70D268F0195EA733005904F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70D268F2195EA733005904F9 /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
-		70D268F4195EA733005904F9 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		70D268F7195EA733005904F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		70D268F9195EA733005904F9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		70D268FF195EA733005904F9 /* myICQTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myICQTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,7 +172,6 @@
 				616EB9D0195EC16200D0D37A /* Transport */,
 				70D2690F195EB431005904F9 /* Data */,
 				70D268F0195EA733005904F9 /* AppDelegate.swift */,
-				70D268F4195EA733005904F9 /* SecondViewController.swift */,
 				70D268F6195EA733005904F9 /* Main.storyboard */,
 				70D268F9195EA733005904F9 /* Images.xcassets */,
 				70D268EE195EA733005904F9 /* Supporting Files */,
@@ -364,7 +361,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				61523384195EC464005A09D5 /* ContactListService.swift in Sources */,
-				70D268F5195EA733005904F9 /* SecondViewController.swift in Sources */,
 				616EB9D2195EC19400D0D37A /* TransportService.swift in Sources */,
 				70D2691B195EC1B6005904F9 /* Profile.swift in Sources */,
 				70D26914195EC006005904F9 /* ConversationController.swift in Sources */,
