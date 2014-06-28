@@ -16,6 +16,12 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITextF
 	@IBOutlet var textField: UITextField
     @IBOutlet var scrollButton: UIButton
 	
+    @IBAction func sendMessage(sender: UIButton) {
+        _conversationController.sendMessage(textField.text)
+        textField.text = ""
+        
+    }
+    
 	@lazy var _conversationController:ConversationController = ConversationController()
 	
     var traking: Bool = true
