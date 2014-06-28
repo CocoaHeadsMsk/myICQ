@@ -14,7 +14,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactCell" textLabel="HNL-Hf-uHV" detailTextLabel="Muv-fF-2gb" style="IBUITableViewCellStyleSubtitle" id="nDK-d5-dHg">
+                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="ContactCell" textLabel="HNL-Hf-uHV" detailTextLabel="Muv-fF-2gb" style="IBUITableViewCellStyleSubtitle" id="nDK-d5-dHg">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nDK-d5-dHg" id="2Eo-RE-TPF">
                                     <autoresizingMask key="autoresizingMask"/>
