@@ -18,6 +18,9 @@ class ConversationController {
 
 		MagicalRecord.saveUsingCurrentThreadContextWithBlockAndWait( { context in
 			result = Message.MR_findAllWithPredicate(nil, inContext: context) as Message[]
+			for msg: Message in result {
+				println(msg.text)
+			}
 			}
 		)
 
