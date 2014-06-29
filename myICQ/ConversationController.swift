@@ -8,6 +8,10 @@
 
 import Foundation
 
+@class_protocol protocol ConversationControllerDelegate  {
+	func handleIncomingMessages(messages:Message[])
+}
+
 class ConversationController {
 
 	@lazy var _loadedMessages :Array<Message> = self.loadMessages()
@@ -29,8 +33,8 @@ class ConversationController {
 	
 	init() {
 		MessageManager.sharedInstance().addIncomingMessageObserver(){ messages in
-			for callback:NewMessagesObserverCallback in self._observers {
-				callback(messages)
+			for callback:ConversationControllerDelegate in self._observers {
+				callback.handleIncomingMessages(messages)
 			}
 		}
 	}
@@ -50,10 +54,18 @@ class ConversationController {
 
 	typealias NewMessagesObserverCallback = ( Message[] )->Void
 
-	@lazy var _observers : NewMessagesObserverCallback[] = []
+	@lazy var _observers : ConversationControllerDelegate[] = []
 
-	func addIncomingMessageObserver( observer:NewMessagesObserverCallback ) {
+	func addIncomingMessageObserver( observer:ConversationControllerDelegate ) {
 		_observers.append(observer)
+	}
+	func removeIncomingMessageObserver( observer:ConversationControllerDelegate ) {
+		for o:ConversationControllerDelegate in _observers {
+			var tmp:AnyObject = o
+			if o === observer {
+
+			}
+		}
 	}
 	
     func sendMessage(message : String) -> Void{

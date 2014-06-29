@@ -8,6 +8,10 @@
 
 import Foundation
 
+@class_protocol protocol MessageObserverCallback {
+	
+}
+
 class MessageManager {
 	typealias MessageObserverCallback = ( Message[] )->Void
 

@@ -10,7 +10,7 @@ import UIKit
 
 let animationDuration = 1.0
 
-class ConversationViewController: UIViewController, UITableViewDelegate, UITextFieldDelegate, UIScrollViewDelegate {
+class ConversationViewController: UIViewController, UITableViewDelegate, UITextFieldDelegate, UIScrollViewDelegate, ConversationControllerDelegate {
 
 	@IBOutlet var _tableView: UITableView
 	@IBOutlet var textField: UITextField
@@ -27,29 +27,29 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITextF
 	var traking: Bool = true
 	var _messages: Message[]  = []
 
+	func handleIncomingMessages(messages: Message[]) {
+		var indexPaths = NSIndexPath[]()
+		self._tableView.beginUpdates()
+		for msg:Message in messages {
+			indexPaths.append(NSIndexPath(forRow: self._messages.count, inSection: 0))
+			self._messages.append(msg)
+		}
+		self._tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: UITableViewRowAnimation.Bottom)
+		self._tableView.endUpdates();
+
+		if (self.traking){
+			self._tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self._messages.count - 1, inSection: 0) , atScrollPosition: UITableViewScrollPosition.Middle, animated: true)
+		}
+		self.updateBadge()
+	}
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		_messages = _conversationController.loadMessages()
 
 		_tableView.allowsSelection = false
 
-		_conversationController.addIncomingMessageObserver(){ messages in
-
-			var indexPaths = NSIndexPath[]()
-			self._tableView.beginUpdates()
-			for msg:Message in messages {
-				indexPaths.append(NSIndexPath(forRow: self._messages.count, inSection: 0))
-				self._messages.append(msg)
-			}
-			self._tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: UITableViewRowAnimation.Bottom)
-			self._tableView.endUpdates();
-
-			if (self.traking){
-				self._tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self._messages.count - 1, inSection: 0) , atScrollPosition: UITableViewScrollPosition.Middle, animated: true)
-			}
-
-			self.updateBadge()
-		}
+		_conversationController.addIncomingMessageObserver(self)
 
 		updateBadge()
 

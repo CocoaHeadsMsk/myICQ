@@ -18,6 +18,8 @@
 		615A6FA9195FF4E5006C333D /* alxsrg.com.myICQ.ShareWithMyICQ.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 615A6F9F195FF4E5006C333D /* alxsrg.com.myICQ.ShareWithMyICQ.appex */; };
 		616EB9D2195EC19400D0D37A /* TransportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616EB9D1195EC19400D0D37A /* TransportService.swift */; };
 		616EB9D3195EC19400D0D37A /* TransportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616EB9D1195EC19400D0D37A /* TransportService.swift */; };
+		70CB5221196010820019BBEA /* Array+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CB5220196010820019BBEA /* Array+Utils.swift */; };
+		70CB5223196019A90019BBEA /* GenericObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CB5222196019A90019BBEA /* GenericObserver.swift */; };
 		70D268F1195EA733005904F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D268F0195EA733005904F9 /* AppDelegate.swift */; };
 		70D268F3195EA733005904F9 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D268F2195EA733005904F9 /* ConversationViewController.swift */; };
 		70D268F8195EA733005904F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70D268F6195EA733005904F9 /* Main.storyboard */; };
@@ -82,6 +84,8 @@
 		616EB9C9195EBB1500D0D37A /* myICQTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "myICQTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		616EB9CD195EBF5300D0D37A /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		616EB9D1195EC19400D0D37A /* TransportService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportService.swift; sourceTree = "<group>"; };
+		70CB5220196010820019BBEA /* Array+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Utils.swift"; sourceTree = "<group>"; };
+		70CB5222196019A90019BBEA /* GenericObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericObserver.swift; sourceTree = "<group>"; };
 		70D268EB195EA733005904F9 /* myICQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myICQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70D268EF195EA733005904F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70D268F0195EA733005904F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -202,6 +206,15 @@
 			name = Transport;
 			sourceTree = "<group>";
 		};
+		70CB521F1960104F0019BBEA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				70CB5220196010820019BBEA /* Array+Utils.swift */,
+				70CB5222196019A90019BBEA /* GenericObserver.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		70D268E2195EA733005904F9 = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +240,7 @@
 		70D268ED195EA733005904F9 /* myICQ */ = {
 			isa = PBXGroup;
 			children = (
+				70CB521F1960104F0019BBEA /* Utils */,
 				615A6F9A195F1528006C333D /* Conversations */,
 				1CE7D71B195ED928005F495B /* ContactList */,
 				61523387195EE091005A09D5 /* Managers */,
@@ -466,6 +480,8 @@
 				616EB9D2195EC19400D0D37A /* TransportService.swift in Sources */,
 				70D2691B195EC1B6005904F9 /* Profile.swift in Sources */,
 				70D26914195EC006005904F9 /* ConversationController.swift in Sources */,
+				70CB5221196010820019BBEA /* Array+Utils.swift in Sources */,
+				70CB5223196019A90019BBEA /* GenericObserver.swift in Sources */,
 				70D26912195EB44A005904F9 /* myICQ.xcdatamodeld in Sources */,
 				70D2691D195ED8F3005904F9 /* MessageManager.swift in Sources */,
 				70D26916195EC194005904F9 /* Message.swift in Sources */,
