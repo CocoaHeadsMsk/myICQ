@@ -4,14 +4,24 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ShareWithMyICQ.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>myICQ.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>615A6F9E195FF4E5006C333D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>70D268EA195EA733005904F9</key>
 		<dict>
 			<key>primary</key>

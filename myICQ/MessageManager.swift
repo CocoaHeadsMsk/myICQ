@@ -57,7 +57,7 @@ class MessageManager {
     }
     
 	func _runTestMessagesTimer() {
-		var delay = Int64(NSEC_PER_SEC) * 2;
+		var delay = Int64(NSEC_PER_SEC) * 5
 		dispatch_after(dispatch_time(DISPATCH_TIME_NOW, delay),
 			dispatch_get_main_queue()) {
 

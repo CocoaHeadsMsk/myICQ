@@ -12,7 +12,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="ContactCell" textLabel="HNL-Hf-uHV" detailTextLabel="Muv-fF-2gb" style="IBUITableViewCellStyleSubtitle" id="nDK-d5-dHg">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -120,7 +119,6 @@
                             <constraint firstItem="dkB-hZ-fSL" firstAttribute="leading" secondItem="Qrf-5d-58E" secondAttribute="trailing" constant="8" id="hmF-2N-GRf"/>
                             <constraint firstItem="dkB-hZ-fSL" firstAttribute="centerY" secondItem="Qrf-5d-58E" secondAttribute="centerY" id="lou-cO-6Ht"/>
                         </constraints>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Messages" image="first" id="acW-dT-cKf"/>
                     <connections>

@@ -13,6 +13,9 @@
 		61523385195EC464005A09D5 /* ContactListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61523383195EC464005A09D5 /* ContactListService.swift */; };
 		6152338A195EE0AE005A09D5 /* ContactListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61523389195EE0AE005A09D5 /* ContactListManager.swift */; };
 		6152338B195EE0AE005A09D5 /* ContactListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61523389195EE0AE005A09D5 /* ContactListManager.swift */; };
+		615A6FA4195FF4E5006C333D /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615A6FA3195FF4E5006C333D /* ShareViewController.swift */; };
+		615A6FA6195FF4E5006C333D /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 615A6FA5195FF4E5006C333D /* MainInterface.storyboard */; };
+		615A6FA9195FF4E5006C333D /* alxsrg.com.myICQ.ShareWithMyICQ.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 615A6F9F195FF4E5006C333D /* alxsrg.com.myICQ.ShareWithMyICQ.appex */; };
 		616EB9D2195EC19400D0D37A /* TransportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616EB9D1195EC19400D0D37A /* TransportService.swift */; };
 		616EB9D3195EC19400D0D37A /* TransportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616EB9D1195EC19400D0D37A /* TransportService.swift */; };
 		70D268F1195EA733005904F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D268F0195EA733005904F9 /* AppDelegate.swift */; };
@@ -29,6 +32,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		615A6FA7195FF4E5006C333D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70D268E3195EA733005904F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 615A6F9E195FF4E5006C333D;
+			remoteInfo = ShareWithMyICQ;
+		};
+		615A6FAA195FF4E5006C333D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70D268E3195EA733005904F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 615A6F9E195FF4E5006C333D;
+			remoteInfo = ShareWithMyICQ;
+		};
 		70D26900195EA733005904F9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 70D268E3195EA733005904F9 /* Project object */;
@@ -38,11 +55,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		615A6FAF195FF4E5006C333D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				615A6FA9195FF4E5006C333D /* alxsrg.com.myICQ.ShareWithMyICQ.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1CE7D71C195ED987005F495B /* ContactListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
 		2FD043F53C3044EA94713523 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		61523383195EC464005A09D5 /* ContactListService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListService.swift; sourceTree = "<group>"; };
 		61523389195EE0AE005A09D5 /* ContactListManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListManager.swift; sourceTree = "<group>"; };
+		615A6F9F195FF4E5006C333D /* alxsrg.com.myICQ.ShareWithMyICQ.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = alxsrg.com.myICQ.ShareWithMyICQ.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		615A6FA2195FF4E5006C333D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		615A6FA3195FF4E5006C333D /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		615A6FA5195FF4E5006C333D /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		616EB9C8195EBB1500D0D37A /* myICQ-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "myICQ-Bridging-Header.h"; sourceTree = "<group>"; };
 		616EB9C9195EBB1500D0D37A /* myICQTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "myICQTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		616EB9CD195EBF5300D0D37A /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
@@ -66,6 +101,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		615A6F9C195FF4E5006C333D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		70D268E8195EA733005904F9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -134,6 +176,24 @@
 			name = Conversations;
 			sourceTree = "<group>";
 		};
+		615A6FA0195FF4E5006C333D /* ShareWithMyICQ */ = {
+			isa = PBXGroup;
+			children = (
+				615A6FA3195FF4E5006C333D /* ShareViewController.swift */,
+				615A6FA5195FF4E5006C333D /* MainInterface.storyboard */,
+				615A6FA1195FF4E5006C333D /* Supporting Files */,
+			);
+			path = ShareWithMyICQ;
+			sourceTree = "<group>";
+		};
+		615A6FA1195FF4E5006C333D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				615A6FA2195FF4E5006C333D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		616EB9D0195EC16200D0D37A /* Transport */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				70D268ED195EA733005904F9 /* myICQ */,
+				615A6FA0195FF4E5006C333D /* ShareWithMyICQ */,
 				70D26902195EA733005904F9 /* myICQTests */,
 				70D268EC195EA733005904F9 /* Products */,
 				2FD043F53C3044EA94713523 /* Pods.xcconfig */,
@@ -158,6 +219,7 @@
 			children = (
 				70D268EB195EA733005904F9 /* myICQ.app */,
 				70D268FF195EA733005904F9 /* myICQTests.xctest */,
+				615A6F9F195FF4E5006C333D /* alxsrg.com.myICQ.ShareWithMyICQ.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -229,6 +291,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		615A6F9E195FF4E5006C333D /* ShareWithMyICQ */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 615A6FAC195FF4E5006C333D /* Build configuration list for PBXNativeTarget "ShareWithMyICQ" */;
+			buildPhases = (
+				615A6F9B195FF4E5006C333D /* Sources */,
+				615A6F9C195FF4E5006C333D /* Frameworks */,
+				615A6F9D195FF4E5006C333D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShareWithMyICQ;
+			productName = ShareWithMyICQ;
+			productReference = 615A6F9F195FF4E5006C333D /* alxsrg.com.myICQ.ShareWithMyICQ.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		70D268EA195EA733005904F9 /* myICQ */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 70D26909195EA733005904F9 /* Build configuration list for PBXNativeTarget "myICQ" */;
@@ -238,10 +317,13 @@
 				70D268E8195EA733005904F9 /* Frameworks */,
 				70D268E9195EA733005904F9 /* Resources */,
 				134227E1F00F400E97AA2FA6 /* Copy Pods Resources */,
+				615A6FAF195FF4E5006C333D /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				615A6FA8195FF4E5006C333D /* PBXTargetDependency */,
+				615A6FAB195FF4E5006C333D /* PBXTargetDependency */,
 			);
 			name = myICQ;
 			productName = myICQ;
@@ -275,6 +357,9 @@
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = alxsrg.com;
 				TargetAttributes = {
+					615A6F9E195FF4E5006C333D = {
+						CreatedOnToolsVersion = 6.0;
+					};
 					70D268EA195EA733005904F9 = {
 						CreatedOnToolsVersion = 6.0;
 					};
@@ -299,11 +384,20 @@
 			targets = (
 				70D268EA195EA733005904F9 /* myICQ */,
 				70D268FE195EA733005904F9 /* myICQTests */,
+				615A6F9E195FF4E5006C333D /* ShareWithMyICQ */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		615A6F9D195FF4E5006C333D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				615A6FA6195FF4E5006C333D /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		70D268E9195EA733005904F9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -356,6 +450,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		615A6F9B195FF4E5006C333D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				615A6FA4195FF4E5006C333D /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		70D268E7195EA733005904F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -389,6 +491,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		615A6FA8195FF4E5006C333D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 615A6F9E195FF4E5006C333D /* ShareWithMyICQ */;
+			targetProxy = 615A6FA7195FF4E5006C333D /* PBXContainerItemProxy */;
+		};
+		615A6FAB195FF4E5006C333D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 615A6F9E195FF4E5006C333D /* ShareWithMyICQ */;
+			targetProxy = 615A6FAA195FF4E5006C333D /* PBXContainerItemProxy */;
+		};
 		70D26901195EA733005904F9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 70D268EA195EA733005904F9 /* myICQ */;
@@ -408,6 +520,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		615A6FAD195FF4E5006C333D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ShareWithMyICQ/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "alxsrg.com.myICQ.$(TARGET_NAME:rfc1034identifier)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		615A6FAE195FF4E5006C333D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				INFOPLIST_FILE = ShareWithMyICQ/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "alxsrg.com.myICQ.$(TARGET_NAME:rfc1034identifier)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		70D26907195EA733005904F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -560,6 +702,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		615A6FAC195FF4E5006C333D /* Build configuration list for PBXNativeTarget "ShareWithMyICQ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				615A6FAD195FF4E5006C333D /* Debug */,
+				615A6FAE195FF4E5006C333D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		70D268E6195EA733005904F9 /* Build configuration list for PBXProject "myICQ" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
