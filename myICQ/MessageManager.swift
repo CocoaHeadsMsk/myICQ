@@ -35,12 +35,12 @@ class MessageManager {
 	func generateTestMessages()->Message[] {
 		var result: Message[] = []
 		MagicalRecord.saveUsingCurrentThreadContextWithBlockAndWait( { context in
-
+			
 			for i:Int in 1..5 {
 				var msg: Message = Message.MR_createInContext(context) as Message
 				msg.text = "test message \(self._messageCounter)"
-				msg.sortOrder = self._messageCounter
-
+//				msg.sortOrder = self._messageCounter
+				
 				result += msg
 				++self._messageCounter
 			}

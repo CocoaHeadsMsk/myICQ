@@ -48,14 +48,17 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITextF
 				self._tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self._messages.count - 1, inSection: 0) , atScrollPosition: UITableViewScrollPosition.Middle, animated: true)
 			}
 
-
+			self.updateBadge()
 		}
 
-		self.tabBarItem.badgeValue = String(_messages.count)
+		updateBadge()
 
 		scrollButton.addTarget(self, action: "scrollToBottomPressed", forControlEvents: .TouchUpInside)
 		scrollButton.hidden = traking
-
+	}
+	
+	func updateBadge() {
+		self.tabBarItem.badgeValue = String(_messages.count)
 	}
 
 	func scrollToBottomPressed() -> Void {
